@@ -28,4 +28,17 @@ public class Producto {
     @JoinColumn(name="id_categoria",insertable = false,updatable = false)
     private Categoria categoria;
 
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "idProducto=" + idProducto +
+                ", nombre='" + nombre + '\'' +
+                ", idCategoria=" + idCategoria +
+                ", codigoBarras='" + codigoBarras + '\'' +
+                ", precioVenta=" + precioVenta +
+                ", cantidadStock=" + cantidadStock +
+                ", estado=" + estado +
+                ", categoria=" + categoria +
+                '}';
+    }
 }

@@ -19,6 +19,10 @@ dependencies {
 	//Solo se necesita en tiempo de ejecución
 	runtimeOnly 'org.postgresql:postgresql'
 
+	//Map Struct y anotaciones.
+	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
 	compileOnly group: 'org.projectlombok', name: 'lombok'
 
