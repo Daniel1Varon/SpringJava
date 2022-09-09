@@ -1,12 +1,17 @@
 package com.platzi.market.persistence.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
 @Table(name = "categorias")
 public class Categoria {
     @Id

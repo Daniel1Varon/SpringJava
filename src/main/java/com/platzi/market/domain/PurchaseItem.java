@@ -8,8 +8,10 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Category {
-    private int categoryId;
-    private String category;
+public class PurchaseItem {
+    private long productId;
+    private int quantity;
+    private double total;
     private boolean active;
+
 }

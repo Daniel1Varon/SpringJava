@@ -2,6 +2,8 @@ package com.platzi.market.persistence.entity;
 
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -9,7 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
+@ToString
 @Table(name = "compras")
 public class Compra {
     @Id
@@ -26,7 +30,8 @@ public class Compra {
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
-    @OneToMany(mappedBy = "producto")
+
+    @OneToMany(mappedBy = "compra",cascade={CascadeType.ALL})
     private List<ComprasProducto> productos;
 
 }

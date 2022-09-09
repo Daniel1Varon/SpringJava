@@ -19,13 +19,14 @@ dependencies {
 	//Solo se necesita en tiempo de ejecución
 	runtimeOnly 'org.postgresql:postgresql'
 
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	//Poner siempre antes del mapstruct
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
 	//Map Struct y anotaciones.
 	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
-
-	// https://mvnrepository.com/artifact/org.projectlombok/lombok
-	compileOnly group: 'org.projectlombok', name: 'lombok'
-
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
