@@ -12,6 +12,7 @@ import java.util.Date;
 public class JWTUtil {
     private static final String KEY = "daniel";
 
+    //fecha de expiración 10 horas en milisegundos. Key es la llave privada.
     public String generateToken(UserDetails userDetails) {
         return Jwts.builder().setSubject(userDetails.getUsername()).setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10))
@@ -31,6 +32,7 @@ public class JWTUtil {
     }
 
     private Claims getClaims(String token) {
+        //que hace signing key?
         return Jwts.parser().setSigningKey(KEY).parseClaimsJws(token).getBody();
     }
 }
