@@ -13,8 +13,16 @@ repositories {
 }
 
 dependencies {
+	//Spring security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//Swagger es para documentar el codigo
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	//Muestra documentacion en una pagina para ver visualmente los endpoints de la api
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
 	//Solo se necesita en tiempo de ejecución
 	runtimeOnly 'org.postgresql:postgresql'
